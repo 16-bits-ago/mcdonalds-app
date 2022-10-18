@@ -11,7 +11,7 @@ export const SIZES = {
     // global sizes
     base: 8,
     font: 14,
-    radius: 12,
+    radius: 20,
     padding: 24,
 
     // font sizes
@@ -26,6 +26,6 @@ export const SIZES = {
     body5: 12
 }
 
-const appTheme = { COLORS, SIZES, FONTS };
+const appTheme = { COLORS, SIZES };
 
 export default appTheme;
