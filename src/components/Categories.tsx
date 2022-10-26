@@ -4,7 +4,7 @@ import { COLORS, SIZES } from '../../constants'
 import { categories } from '../categories'
 
 const Categories = () => {
-  const [active, setActive] = useState(null)
+  const [active, setActive] = useState<number | null>(null)
 
   return (
     <View style={{ paddingTop: 60 }}>

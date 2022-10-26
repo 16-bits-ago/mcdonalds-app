@@ -4,7 +4,7 @@ import { COLORS, SIZES } from '../../constants'
 import { popular } from '../popular'
 
 const Popular = () => {
-  const [active, setActive] = useState(null)
+  const [active, setActive] = useState<number | null>(null)
   return (
     <View style={{ paddingTop: 20 }}>
       <Text

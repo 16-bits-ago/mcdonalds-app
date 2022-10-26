@@ -1,14 +1,25 @@
 import React from 'react'
-import { View, Text, Image, TouchableHighlight, ToastAndroid } from 'react-native'
+import {
+  View,
+  Text,
+  Image,
+  TouchableHighlight,
+  ToastAndroid
+} from 'react-native'
 
 const Header = () => {
-    const showToast = () => {
-        ToastAndroid.show("Pressed", ToastAndroid.SHORT,
-        ToastAndroid.CENTER,);
-      };
+  const showToast = () => {
+    ToastAndroid.show('Pressed', ToastAndroid.SHORT)
+  }
 
   return (
-    <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+    <View
+      style={{
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between'
+      }}
+    >
       <TouchableHighlight onPress={() => showToast()}>
         <Image
           source={{
@@ -19,7 +30,9 @@ const Header = () => {
       </TouchableHighlight>
       <TouchableHighlight onPress={() => showToast()}>
         <Image
-          source={{uri: 'https://www.iconpacks.net/icons/2/free-shopping-cart-icon-3045-thumb.png'}}
+          source={{
+            uri: 'https://www.iconpacks.net/icons/2/free-shopping-cart-icon-3045-thumb.png'
+          }}
           style={{ width: 45, height: 45 }}
         />
       </TouchableHighlight>
