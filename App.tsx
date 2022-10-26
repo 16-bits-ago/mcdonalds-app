@@ -4,7 +4,7 @@ import { COLORS } from './constants';
 import Categories from './src/components/Categories';
 import Header from './src/components/Header';
 import Popular from './src/components/Popular';
-import styles from './test';
+import styles from './test.module.css';
 
 export default function App() {
     return (
