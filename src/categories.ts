@@ -23,4 +23,4 @@ export const categories = [
         image: 'https://www.mcdonalds.com.hk/wp-content/uploads/2020/07/MDS200401_SC_DK_Other-5.png',
         name: 'Snacks & Sides',
     }
-]
+];

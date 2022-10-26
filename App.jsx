@@ -4,7 +4,6 @@ import { COLORS } from './constants'
 import Categories from './src/components/Categories'
 import Header from './src/components/Header'
 import Popular from './src/components/Popular'
-
 export default function App() {
   return (
     <View

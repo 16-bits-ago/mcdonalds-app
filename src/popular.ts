@@ -19,4 +19,4 @@ export const popular = [
         name: 'Fillet-o-Fish',
         price: '$8.20'
     }
-]
+];

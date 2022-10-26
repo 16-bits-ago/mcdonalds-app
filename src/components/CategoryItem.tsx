@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 const CategoryItem = () => {
     return (
         <>CategoryItem</>
     );
-}
+};
 
-export default CategoryItem
+export default CategoryItem;

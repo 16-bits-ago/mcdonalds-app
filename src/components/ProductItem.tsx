@@ -1,7 +1,11 @@
+import React, { Text, View } from 'react-native';
+
 const ProductItem = () => {
     return (
-        <>ProductItem</>
+        <View>
+            <Text>ProductItem</Text>
+        </View>
     );
-}
+};
 
-export default ProductItem
+export default ProductItem;
