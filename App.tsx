@@ -4,6 +4,8 @@ import { COLORS } from './constants'
 import Categories from './src/components/Categories'
 import Header from './src/components/Header'
 import Popular from './src/components/Popular'
+import styles from './test'
+
 export default function App() {
   return (
     <View
@@ -14,6 +16,7 @@ export default function App() {
       }}
     >
       <Header />
+      <View style={styles.test}></View>
       <ScrollView>
       <Categories />
       <Popular />
