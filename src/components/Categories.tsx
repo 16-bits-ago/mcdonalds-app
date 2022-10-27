@@ -1,63 +1,33 @@
 import React, { useState } from 'react';
 import { Image, Text, TouchableHighlight, View } from 'react-native';
-import { COLORS, SIZES } from '../../constants';
-import { categories } from '../categories';
+import { COLORS } from '../../constants';
+import { categories } from '../DataBase/categories';
+import theme from '../styles/theme.module.css';
 
 const Categories = () => {
     const [active, setActive] = useState<number | null>(null);
 
     return (
-        <View style={{ paddingTop: 60 }}>
-            <Text style={{ fontSize: SIZES.h1, fontWeight: 'bold', color: COLORS.white }}>Hey,</Text>
-            <Text style={{ fontSize: SIZES.h1, color: COLORS.white }}>what&apos;s up</Text>
-            <View
-                style={{
-                    flexDirection: 'row',
-                    flexWrap: 'wrap',
-                    justifyContent: 'space-between',
-                    marginTop: 20
-                }}
-            >
+        <View style={theme.categoryWrapper}>
+            <Text style={theme.headerTextMain}>Hey,</Text>
+            <Text style={theme.headerTextSecondary}>what&apos;s up</Text>
+            <View style={theme.categoryContentWrap}>
                 {categories.map((cat, i) => (
-                    <View
-                        key={`category ${i}`}
-                        style={{
-                            width: '30%',
-                            marginBottom: 20,
-                            /* backgroundColor: active === i ? COLORS.secondary : COLORS.grey, */
-                        }}
-                    >
+                    <View key={`category ${i}`} style={theme.categoryItemWrap}>
                         <TouchableHighlight
                             underlayColor={COLORS.secondary}
                             onPress={() => setActive(i)}
-                            style={{
-                                borderRadius: SIZES.radius,
-                                justifyContent: 'center',
-                                paddingHorizontal: 5,
-                                height: 110,
-                                backgroundColor: COLORS.grey
-                            }}
+                            style={theme.categoryItemTouched}
                         >
-                            <View
-                                style={{
-                                    alignItems: 'center'
-                                }}
-                            >
+                            <React.Fragment>
                                 <Image
                                     source={{ uri: cat.image }}
-                                    style={{ width: 40, height: 40 }}
+                                    style={theme.categoryItemImage}
                                 />
-                                <Text
-                                    style={{
-                                        fontSize: SIZES.h4,
-                                        color: COLORS.white,
-                                        marginTop: 10,
-                                        textAlign: 'center'
-                                    }}
-                                >
+                                <Text style={theme.categoryItemText}>
                                     {cat.name}
                                 </Text>
-                            </View>
+                            </React.Fragment>
                         </TouchableHighlight>
                     </View>
                 ))}

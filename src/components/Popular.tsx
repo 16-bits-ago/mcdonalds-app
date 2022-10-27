@@ -1,75 +1,36 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableHighlight, Image } from 'react-native';
 import { COLORS, SIZES } from '../../constants';
-import { popular } from '../popular';
+import { popular } from '../DataBase/popular';
+import theme from '../styles/theme.module.css';
 
 const Popular = () => {
     const [active, setActive] = useState<number | null>(null);
     return (
-        <View style={{ paddingTop: 20 }}>
-            <Text
-                style={{ fontSize: SIZES.h1, fontWeight: 'bold', color: COLORS.white }}
-            >
-        Popular
-            </Text>
-            <View
-                style={{
-                    flexDirection: 'row',
-                    flexWrap: 'wrap',
-                    justifyContent: 'space-between',
-                    marginTop: 20
-                }}
-            >
+        <View style={theme.popularWrapper}>
+            <Text style={theme.headerTextMain}>Popular</Text>
+            <View style={theme.categoryContentWrap}>
                 {popular.map((propduct, i) => (
-                    <View
+                    <View 
+                        style={[
+                            theme.popularItemWrap,
+                            { backgroundColor: active === i ? COLORS.secondary : COLORS.grey }
+                        ]}
                         key={`popular ${i}`}
-                        style={{
-                            width: '30%',
-                            marginBottom: 20,
-                            paddingHorizontal: 5,
-                            height: 120,
-                            backgroundColor: active === i ? COLORS.secondary : COLORS.grey,
-                            borderRadius: SIZES.radius
-                        }}
                     >
-                        <TouchableHighlight
-                            /* underlayColor={COLORS.secondary} */
-                            onPress={() => setActive(i)}
-                            style={{
-                                justifyContent: 'center'
-                            }}
-                        >
-                            <View
-                                style={{
-                                    alignItems: 'center',
-                                    justifyContent: 'center'
-                                }}
-                            >
+                        <TouchableHighlight style={theme.popularItemTouched } onPress={() => setActive(i)}>
+                            <React.Fragment>
                                 <Image
                                     source={{ uri: propduct.image }}
-                                    style={{ width: 40, height: 40 }}
+                                    style={theme.categoryItemImage}
                                 />
-                                <Text
-                                    style={{
-                                        fontSize: SIZES.h4,
-                                        color: COLORS.white,
-                                        marginTop: 10,
-                                        textAlign: 'center'
-                                    }}
-                                >
+                                <Text style={theme.categoryItemText}>
                                     {propduct.name}
                                 </Text>
-                                <Text
-                                    style={{
-                                        fontSize: SIZES.h4,
-                                        color: COLORS.primary,
-                                        marginTop: 10,
-                                        textAlign: 'center'
-                                    }}
-                                >
+                                <Text style={theme.popularItemPrice}>
                                     {propduct.price}
                                 </Text>
-                            </View>
+                            </React.Fragment>
                         </TouchableHighlight>
                     </View>
                 ))}

@@ -1,0 +1,78 @@
+.appWrapper {
+    padding: 60px 24px 0;
+    background-color: #000000;
+    flex: 1;
+}
+
+.headerTextMain {
+    font-size: 30px;
+    color: #FCFCFC;
+    font-weight: bold;
+}
+
+.headerTextSecondary {
+    font-size: 30px;
+    color: #FCFCFC;
+}
+
+.categoryWrapper {
+    padding-top: 60px;
+}
+
+.categoryContentWrap {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.categoryItemWrap {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.categoryItemTouched {
+    border-radius: 20px;
+    justify-content: center;
+    padding: 0 5px;
+    height: 110px;
+    background-color: #111111;
+    align-items: center;
+}
+
+.categoryItemImage {
+    width: 40px;
+    height: 40px;
+}
+
+.categoryItemText {
+    font-size: 14px;
+    color: #FCFCFC;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.popularWrapper {
+    margin-top: 20px;
+}
+
+.popularItemWrap {
+    width: 30%;
+    margin-bottom: 20px;
+    padding: 0 5px;
+    height: 120px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.popularItemTouched {
+    align-items: center;
+}
+
+.popularItemPrice {
+    font-size: 14px;
+    color: #F2CA46;
+    margin-top: 10px;
+    text-align: center;
+}
